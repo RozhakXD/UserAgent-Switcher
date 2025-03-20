@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #4A90E2;    
+    --secondary-color: #00FF88;  
+    --background: linear-gradient(145deg, #1a1a1a, #2D3748);
+    --text-color: #FFFFFF;
+    --card-bg: rgba(45, 55, 72, 0.95);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    padding: 1rem;
+    width: 650px;
+    color: var(--text-color);
+    min-height: 200px;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 700;
+    font-size: 1.5rem;
+    -webkit-text-fill-color: transparent;
+}
+
+.settings-icon {
+    transition: var(--transition);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.settings-icon:hover {
+    background: var(--card-bg);
+}
+
+.ua-selector {
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.selected-ua {
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    background: var(--card-bg);
+    padding: 0.8rem;
+    border-radius: var(--border-radius);
+}
+
+.selected-ua:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.ua-options {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    position: absolute;
+    width: 100%;
+    background: var(--card-bg);
+    display: none;
+    margin-top: 0.5rem;
+    overflow-y: auto;
+    max-height: 300px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.ua-option {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95;
+}
+
+.ua-option:last-child {
+    border-bottom: none;
+}
+
+.ua-option:hover {
+    background: var(--primary-color);
+}
+
+.ua-option .material-icons {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.custom-agent {
+    background: var(--card-bg);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.custom-input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.save-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+.save-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.notification {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    background: var(--secondary-color);
+    color: #1a1a1a;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: top 0.5 ease;
+}

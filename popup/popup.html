@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="title">User-Agent Switcher</div>
+        <span class="material-icons settings-icon">settings</span>
+    </div>
+
+    <div class="ua-selector">
+        <div class="selected-ua" id="selectedUA">
+            <span>Pilih User-Agent</span>
+            <span class="material-icons">arrow_drop_down</span>
+        </div>
+
+        <div class="ua-options" id="uaOptions">
+            <div class="ua-option" data-value="default">
+                <span class="material-icons">desktop_windows</span>
+                Default (Chrome)
+            </div>
+
+            <div class="ua-option" data-value="iphone">
+                <span class="material-icons">smartphone</span>
+                iPhone Safari
+            </div>
+
+            <div class="ua-option" data-value="android">
+                <span class="material-icons">android</span>
+                Android Chrome
+            </div>
+
+            <div class="ua-option" data-value="custom">
+                <span class="material-icons">edit</span>
+                Custom...
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-agent" id="customAgent">
+        <input type="text" class="custom-input" id="customInput" placeholder="Contoh: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...">
+        <button class="save-btn" id="saveCustom">Simpan</button>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
